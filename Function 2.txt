@@ -1,7 +1,14 @@
 #Function 2
 
-Test : Allan Here
-Test : Leeroy Here
-Test : Clarencia Here
-Test : Orifha Here
-Test : Duduzile Here
+def five_sum(items):
+    track = metrics(gauteng)
+    
+    big = track['max']
+    median = track['median']
+    small = track['min']
+    
+    dictionary={'max':round(big,2),
+               'median':round(median,2),
+               'min': round(small,2)}
+        
+    return dictionary
