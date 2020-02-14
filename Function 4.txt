@@ -1,0 +1,19 @@
+def extract_municipality_hashtags(df):
+    
+    municipality_dict = { '@CityofCTAlerts' : 'Cape Town',
+                '@CityPowerJhb' : 'Johannesburg',
+                '@eThekwiniM' : 'eThekwini' ,
+                '@EMMInfo' : 'Ekurhuleni',
+                '@centlecutility' : 'Mangaung',
+                '@NMBmunicipality' : 'Nelson Mandela Bay',
+                '@CityTshwane' : 'Tshwane'}
+    
+
+    df["municipality"] = df["Tweets"].apply(lambda df: ','.join([municipality_dict[key] for key in df.split() if key in municipality_dict.keys()]))
+    df["hashtags"] = df["Tweets"].apply(lambda df: [x.lower() for x in df.split() if x[0]=='#'])
+    df['hashtags'] = df['hashtags'].apply(lambda x: np.nan if x == [] else x)
+    df['municipality']=df['municipality'].apply(lambda x: np.nan if x == '' else x)
+
+     
+    
+    return df
