@@ -1,6 +1,0 @@
-def date_parser(dates):
-    truth=[]
-    for i in dates:
-        prince=i.split(' ')
-        truth.append(prince[0])
-    return truth
