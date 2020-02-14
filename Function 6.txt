@@ -1,7 +1,0 @@
-def word_splitter(df):
-    import pandas as pd
-
-    df['Split_Tweets']=df["Tweets"].str.lower()
-
-    df["Split_Tweets"]=df["Split_Tweets"].str.split(' ')
-    return df
