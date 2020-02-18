@@ -1,16 +1,27 @@
 #Function 2
 
-def five_sum(items):
-    track = metrics(gauteng)
+def five_num_summary(items):
+    """This function returns the five number summary as a dictionary. The five number summary includes:
+    , median, maximum, minimum, quartile 1 and 3
     
-    big = track['max']
-    median = track['median']
-    small = track['min']
-    q1= 1/4 *((len(items) + 1)
-    q3= 3/4 *((len(items) + 1)
+    Parameters:
+        items(list):list of intergers used to create a dictionary of five number summary
+    
+    Returns:
+        returns a dictionary of five number summary rounded to two decimal place
+    """
+
+    median=np.median(items)
+    small=min(items)
+    big=max(items)
+    list2=sorted(items)
+    firstquart= np.quantile(list2,0.25)
+    lastquart= np.quantile(list2,0.75)
     
     dictionary={'max':round(big,2),
                'median':round(median,2),
-               'min': round(small,2)}
+               'min': round(small,2),
+               'q1':round(firstquart,2),
+               'q3':round(lastquart,2)}
         
     return dictionary
