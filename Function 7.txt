@@ -1,0 +1,18 @@
+def stop_words_remover(df):
+    
+    """ The function removes stop words from tweets and returns those tweets as a list without the stop words
+    
+    Parameters:
+        df(DataFrame): The Dataframe of tweets which will have it's stop words removed
+        
+    Returns:
+        df(DataFrame): Returns a DataFrame with an added column of a list of tweets with the stop words removed
+    
+    """
+
+    
+    df['Without Stop Words'] = df['Tweets'].apply(str.split)
+    for i in range(len(df)):
+        df['Without Stop Words'][i] = [item.lower() for item in df['Without Stop Words'][i] 
+                                       if item.lower() not in stop_words_dict['stopwords']]
+    return df
