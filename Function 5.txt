@@ -1,5 +1,0 @@
-def number_of_tweets_per_day(twitter_df):
-    twitter_df['Dates']=twitter_df['Date'].apply(lambda x : x.split(' ')[0])
-    nasty=twitter_df.drop(columns=['Date'])
-    bass=nasty.groupby(nasty['Dates']).count()
-    return bass
