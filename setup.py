@@ -8,6 +8,6 @@ setup(
     long_description=open('README.md').read(),
     install_requires=['numpy','pandas'],
     url='https://github.com/Ron-AllanYisa/Team-4',
-    author='Team 5: [Allan Yisa],[Lee-Roy Yonga],[Orifha Singo],[Clarencia Mondlana],[Duduzile Ngwenya]',
+    author='Team 4: [Allan Yisa],[Lee-Roy Yonga],[Orifha Singo],[Clarencia Mondlana],[Duduzile Ngwenya]',
     author_email='allanyisa@gmail.com'
 )
